@@ -11,6 +11,7 @@
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
     <import resource="spring-mybatis.xml"/>
+    <import resource="spring-shiro.xml"/>
  <!--<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">-->
      <!--<property name="templateLoaderPath" value="/WEB-INF/ftl/" />-->
      <!--<property name="defaultEncoding" value="UTF-8" />-->
