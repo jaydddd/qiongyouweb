@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.sw.swuser">
+     <resultMap id="user" type="com.qianfeng.sw.dto.SwUserDTO">
+        <id property="userId" column="sw_user_id" javaType="java.lang.Integer" />
+        <result property="userPhone" column="sw_user_phone" javaType="java.lang.String"/>
+         <result property="userName" column="sw_user_name" javaType="java.lang.String"/>
+         <result property="userPassword" column="sw_user_password" javaType="java.lang.String"/>
+         <result property="userSalt" column="sw_user_salt" javaType="java.lang.String"/>
+    </resultMap>
+    <select id="uservalue" resultMap="user">
+        SELECT sw_user_password,sw_user_salt FROM sw_user WHERE sw_user_phone= #{userPhone}
+
+    </select>
+
+    
+</mapper>
+
